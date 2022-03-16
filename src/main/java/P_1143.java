@@ -1,7 +1,27 @@
 public class P_1143 {
-    public int longestCommonSubsequence(String text1, String text2) {
-        int m = text1.length(), n = text2.length();
+    /*
+    动态规划
+    1. s1=" "
+       s2 = 任意字符串
 
+    2. s1 =“A”
+       s2 = 任意  s1在s2中最长为1
+
+    3. s1 = “。。。。A”
+       s2 = “。。A”
+
+       字符串问题用二维数组
+          A B A Z D C
+        B 0 1 1 1 1 1
+        A 1       2
+        C           3
+        B
+        A
+        D
+     */
+    public int longestCommonSubsequence(String text1, String text2) {
+        int m = text1.length();
+        int n = text2.length();
         int[][] dp = new int[m + 1][n + 1];
 
         for (int i = 1; i < m + 1; i++) {
@@ -15,6 +35,4 @@ public class P_1143 {
         }
         return dp[m][n];
     }
-
-
 }
