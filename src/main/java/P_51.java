@@ -3,6 +3,9 @@ import java.util.Arrays;
 import java.util.List;
 
 public class P_51 {
+    /*
+    回溯方法
+     */
     List<List<String>> res = new ArrayList<>();
 
     /* 输入棋盘的边长n，返回所有合法的放置 */
@@ -16,8 +19,7 @@ public class P_51 {
         return res;
     }
 
-    public void backtrack(char[][] board, int row) {
-        // 每一行都成功放置了皇后，记录结果
+    public void backtrack(char[][] board, int row) {  // 每一行都成功放置了皇后，记录结果
         if (row == board.length) {
             res.add(charToList(board));
             return;
@@ -50,7 +52,7 @@ public class P_51 {
         }
 
         // 检查右上方是否有皇后冲突
-        for (int i = row - 1, j = col + 1; i >=0 && j < n; i--, j++) {
+        for (int i = row - 1, j = col + 1; i >= 0 && j < n; i--, j++) {
             if (board[i][j] == 'Q') {
                 return false;
             }

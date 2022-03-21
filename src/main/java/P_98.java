@@ -1,8 +1,11 @@
 import Structure.TreeNode;
 
 public class P_98 {
+    /*
+    1.递归
+    2.中序遍历是递增的
+     */
     long pre = Long.MIN_VALUE;
-
     public boolean isValidBST(TreeNode root) {
         if (root == null) {
             return true;

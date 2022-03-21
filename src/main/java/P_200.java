@@ -17,7 +17,7 @@ public class P_200 {
     否则 把当前点设为0 并且往四周遍历 如果遇到0就跳过
     如果遇到1 就 sink这个点
     方法结束返回 1 表示这个岛sink完成了 */
-    int[] dx = new int[]{-1, 1, 0, 0};
+    int[] dx = new int[]{-1, 1, 0, 0};  //方向向量
     int[] dy = new int[]{0, 0, -1, 1};
     private char[][] g;
 
@@ -38,13 +38,13 @@ public class P_200 {
 
     // dfs 把i j 和相邻的点只要是1的话全部变为0 并返回1 表示操作一次
     private int sink(int i, int j) {
-        if (g[i][j] == '0') { //终止条件
+        if (g[i][j] == '0') {     //递归终止条件
             return 0;
         }
-        //当前层的逻辑，把i j对应的点赋为0
-        g[i][j] = '0';
-        // 相邻的点
-        for (int k = 0; k < dx.length; k++) {
+
+        g[i][j] = '0';   //当前层的逻辑，把i j对应的点赋为0
+
+        for (int k = 0; k < dx.length; k++) {    // 相邻的点
             int x = i + dx[k];
             int y = j + dy[k];
             if (x >= 0 && x < g.length && y >= 0 && y < g[i].length) { //不超过边界

@@ -16,7 +16,8 @@ public class P_33 {
             // 检查左半边是否有序并且target不在左半边 说明在右边找
             if (nums[0] <= nums[mid] && (target > nums[mid] || target < nums[0])) {
                 left = mid + 1;
-            } else if (target < nums[0] && target > nums[mid]) { //左版本存在旋转
+                //nums[0] > nums[mid] 左半边存在旋转
+            } else if (target < nums[0] && target > nums[mid]) {
                 left = mid + 1;
             } else {
                 right = mid;

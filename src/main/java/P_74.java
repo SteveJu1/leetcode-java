@@ -1,4 +1,7 @@
 public class P_74 {
+    /*
+    把二维数组换成一维数组
+     */
     public boolean searchMatrix(int[][] matrix, int target) {
         int m = matrix.length, n = matrix[0].length;
         int left = 0, right = m * n - 1;

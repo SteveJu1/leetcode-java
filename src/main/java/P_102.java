@@ -1,4 +1,4 @@
-import Template.DFS;
+import Structure.TreeNode;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -6,24 +6,6 @@ import java.util.List;
 import java.util.Queue;
 
 public class P_102 {
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode() {
-        }
-
-        TreeNode(int val) {
-            this.val = val;
-        }
-
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
-    }
     public List<List<Integer>> levelOrder(TreeNode root) {
         List<List<Integer>> res = new ArrayList(); //返回的结果
         if (null == root) {
@@ -45,7 +27,6 @@ public class P_102 {
                     queue.add(node.right);
                 }
             }
-
             res.add(result);
         }
         return res;
