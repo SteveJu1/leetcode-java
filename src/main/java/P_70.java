@@ -18,7 +18,7 @@ public class P_70 {
      */
 
     public int climbStairs1(int n) {
-        if (n <= 1) return n;
+        if (n <= 2) return n;
         int[] dp = new int[n + 1];/* 定义dp数组 */
         /* 初始化dp数组 */
         dp[1] = 1;
