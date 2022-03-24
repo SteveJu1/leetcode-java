@@ -4,10 +4,10 @@ import java.util.List;
 
 public class P_51 {
     /*
+    https://leetcode-cn.com/problems/n-queens/
     回溯方法
      */
     List<List<String>> res = new ArrayList<>();
-
     /* 输入棋盘的边长n，返回所有合法的放置 */
     public List<List<String>> solveNQueens(int n) {
         // "." 表示空，"Q"表示皇后，初始化棋盘
@@ -15,11 +15,11 @@ public class P_51 {
         for (char[] c : board) {
             Arrays.fill(c, '.');
         }
-        backtrack(board, 0);
+        dfs(board, 0);
         return res;
     }
 
-    public void backtrack(char[][] board, int row) {  // 每一行都成功放置了皇后，记录结果
+    public void dfs(char[][] board, int row) {  // 每一行都成功放置了皇后，记录结果
         if (row == board.length) {
             res.add(charToList(board));
             return;
@@ -35,7 +35,7 @@ public class P_51 {
             // 做选择
             board[row][col] = 'Q';
             // 进入下一行放皇后
-            backtrack(board, row + 1);
+            dfs(board, row + 1);
             // 撤销选择
             board[row][col] = '.';
         }

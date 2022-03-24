@@ -8,14 +8,15 @@ import java.util.List;
 import java.util.Queue;
 
 public class BFS {
-    // 广度优先搜索模板
-    // 广度优先用队列实现
-    //       1
-    //     2   3
-    //    3  4               1出队列后 2 3 进队列   场景 层序遍历
-    // 1.压入root 到queue
-    // 2.当queue不为空 出队列 压入子节点
-    // dsf用栈实现，可以用递归实现
+    /* 广度优先搜索模板 用队列实现
+          1
+       2   3
+     3  4               1出队列后 2 3 进队列   场景 层序遍历
+     1.压入root 到queue
+      2.当queue不为空 出队列 压入子节点
+      dsf用栈实现，可以用递归实现
+
+     */
     public List<List<Integer>> levelOrder(TreeNode root) {
         List<List<Integer>> res = new ArrayList(); //返回的结果
         if (null == root) {
