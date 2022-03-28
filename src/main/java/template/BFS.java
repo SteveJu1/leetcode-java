@@ -1,6 +1,6 @@
-package Template;
+package template;
 
-import Structure.TreeNode;
+import structure.TreeNode;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -12,10 +12,9 @@ public class BFS {
           1
        2   3
      3  4               1出队列后 2 3 进队列   场景 层序遍历
-     1.压入root 到queue
+      1.压入root 到queue
       2.当queue不为空 出队列 压入子节点
       dsf用栈实现，可以用递归实现
-
      */
     public List<List<Integer>> levelOrder(TreeNode root) {
         List<List<Integer>> res = new ArrayList(); //返回的结果
@@ -31,6 +30,7 @@ public class BFS {
             for (int i = 0; i < levelCount; i++) {  //把每一层的节点添加到List中去
                 TreeNode node = queue.poll();
                 result.add(node.val);
+
                 if (node.left != null) {
                     queue.add(node.left);
                 }

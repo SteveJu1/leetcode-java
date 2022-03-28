@@ -1,4 +1,4 @@
-package Template;
+package template;
 
 public class UnionFind {
     private int count = 0;

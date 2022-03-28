@@ -1,15 +1,17 @@
 public class P_14 {
     /*
-    strs = ["flower","flow","flight"]
-    以第一个字为基础
+    flower 以第一个字为基础
+    flow
+    flight
      */
     public String longestCommonPrefix(String[] strs) {
         if (strs == null || strs.length == 0) {
             return "";
         }
-        for (int i = 0; i < strs[0].length(); i++) { //遍历第一个字符串
+        for (int i = 0; i < strs[0].length(); i++) { //遍历第一个字符串的所以列
             char c = strs[0].charAt(i);
-            for (int j = 0; j < strs.length; j++) {
+
+            for (int j = 1; j < strs.length; j++) {  //比较其他所有字符的这一列是否相等
                 if (i == strs[j].length() || strs[j].charAt(i) != c) {
                     return strs[0].substring(0, i);
                 }
@@ -17,6 +19,7 @@ public class P_14 {
         }
         return strs[0];
     }
+
 
 
     public String longestCommonPrefix1(String[] strs) {
@@ -37,4 +40,7 @@ public class P_14 {
         }
         return strs[0].substring(0, min);
     }
+    /*
+    trie
+     */
 }

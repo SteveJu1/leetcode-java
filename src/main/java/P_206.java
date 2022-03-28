@@ -1,4 +1,4 @@
-import Structure.ListNode;
+import structure.ListNode;
 
 public class P_206 {
     public ListNode reverseList(ListNode head) {

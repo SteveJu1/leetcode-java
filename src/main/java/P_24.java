@@ -1,4 +1,4 @@
-import Structure.ListNode;
+import structure.ListNode;
 
 public class P_24 {
     /*

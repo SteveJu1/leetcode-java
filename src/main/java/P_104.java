@@ -1,4 +1,4 @@
-import Structure.TreeNode;
+import structure.TreeNode;
 
 public class P_104 {
     public int maxDepth(TreeNode root) {

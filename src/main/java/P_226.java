@@ -1,4 +1,4 @@
-import Structure.TreeNode;
+import structure.TreeNode;
 
 public class P_226 {
     // 递归模板

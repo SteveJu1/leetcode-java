@@ -8,7 +8,7 @@ public class P_84 {
     2. stack
 
      */
-    public int largestRectangleArea(int[] heights) {
+/*    public int largestRectangleArea(int[] heights) {
 
-    }
+    }*/
 }

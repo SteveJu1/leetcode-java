@@ -1,4 +1,4 @@
-import Structure.TreeNode;
+import structure.TreeNode;
 
 public class P_111 {
     public int minDepth(TreeNode root) {

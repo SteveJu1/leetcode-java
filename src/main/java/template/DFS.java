@@ -1,6 +1,6 @@
-package Template;
+package template;
 
-import Structure.TreeNode;
+import structure.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;
